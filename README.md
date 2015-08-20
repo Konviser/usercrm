@@ -14,6 +14,6 @@ Non-admin users can only browse groups and userlist
 
 <br />
 
-To save date LocalStorage is used
+Data are kept in LocalStorage
 
 
