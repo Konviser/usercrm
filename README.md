@@ -1,3 +1,7 @@
-# usercrm
+# usercms
 
-Credentials: email: admin@admin.com passw: admin
+#### Credentials
+
+*   email: admin@admin.com
+*   passw:  admin
+
