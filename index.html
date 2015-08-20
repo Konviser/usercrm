@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form Using jQuery - Demo Preview</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="db.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="viewHandler.js"></script>
+    <script type="text/javascript" src="user.js"></script>
+    <script type="text/javascript" src="group.js"></script>
+</head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <div class="alert alert-danger" id="error"></div>
+                <form class="form-signin" method="post" action="#" id="loginForm">
+                <h2 class="form-signin-heading">Hi there! Log in</h2>
+                <label for="email" class="sr-only">Email :</label>
+                <input type="text" name="email" id="email" class="form-control">
+                <label class="sr-only" for="password">Password :</label>
+                <input type="password" name="password" id="password" class="form-control">
+                <input type="button" name="login" id="login" value="Login" class="btn btn-lg btn-primary btn-block">
+                </form>
+
+                <div id="sidebar" class="mainView">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand"><a id="jumpToUsers" href="#" >Users</a></li>
+                        <li class="sidebar-brand"><a id="jumpToGroups" href="#">Groups</a></li>
+                        <li class="sidebar-brand"><a id="logout" href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <div id="main" class="mainView">
+                    <div id="userTab" class="hide">
+                        <div id="addNewUser" class="hide">
+                                <h1 class="pull-left">Add new user</h1>
+                                <div class="addUser">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label>Username</label>
+                                            <input type="text" id="username" name="username" class="form-control">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label>Password</label>
+                                            <input type="text" id="newUserPassword" name="password" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label>Email</label>
+                                            <input type="text" id="newUserEmail" name="email" class="form-control">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row row-margin">
+                                        <div class="col-sm-6">
+                                            <label>Admin priveledges</label>
+                                            <input type="checkbox" id="isAdmin">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <button id="addUserToDb" type="button" class="btn btn-default">Add user</button>
+                                            <button id="cleanAddUserForm" type="button" class="btn btn-default">Clear form</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                        </div>
+                        <div id="users"></div>
+                    </div>
+                    <div id="groupTab" class="hide">
+                        <div id="addNewGroup" class="hide">
+                            <h1 class="pull-left">Add new group</h1>
+                            <div class="addGroup">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <label>Name</label>
+                                        <input type="text" id="groupname" name="groupname" class="form-control">
+                                    </div>
+
+                                </div>
+
+                                <div class="row row-margin">
+                                    <div class="col-sm-6">
+                                        <button id="addGroupToDb" type="button" class="btn btn-default">Add group</button>
+                                        <button id="cleanAddGroupForm" type="button" class="btn btn-default">Clear form</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="groups"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
